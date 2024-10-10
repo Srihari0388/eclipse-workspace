@@ -1,0 +1,21 @@
+import org.openqa.selenium.chrome.ChromeDriver;
+import java.util.concurrent.TimeUnit;
+
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane.MaximizeAction;
+
+import org.openqa.selenium.By;
+
+public class SelectDropDown {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "C:\\BrowserDrivers\\chromedriver.exe");
+		ChromeDriver driver = new ChromeDriver();
+		//driver.get("https://signon.service-now.com/");
+		driver.get("https://signon.service-now.com/x_snc_sso_auth.do?pageId=sign-up");
+		driver.findElement(By.id("firstname")).sendKeys("Srihari");
+		driver.findElement(By.name("lastName")).sendKeys("Kolla");
+		driver.findElement(By.name("email")).sendKeys("sriharibabuKolla01@gmail.com");
+		WebElement ddown= driver.findElement(By.name("country"));
+		Select 
+	}
+}

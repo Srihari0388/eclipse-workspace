@@ -1,0 +1,15 @@
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane.MaximizeAction;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class JavaSeiniumDemo {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "C:\\BrowserDrivers\\chromedriver.exe");
+		ChromeDriver driver = new ChromeDriver();
+		driver.get("https://www.ebay.com/");
+		driver.findElement(by.xpath("//*[@id=\"gh-ug\"]/a")).click();
+		driver.manage().window().maximize();
+		}
+
+}

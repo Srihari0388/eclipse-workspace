@@ -1,0 +1,19 @@
+package javaPackage;
+
+public class Double {
+
+	public static void main(String[] args) {
+		int num;
+		//num=100;
+		System.in.scanner("num" +num);
+		num=num/2;
+		System.out.println("num" +num);
+		//System.out.println("Num": +num);
+		num=num*2;
+		System.out.println("num" +num);
+		
+		
+
+	}
+
+}

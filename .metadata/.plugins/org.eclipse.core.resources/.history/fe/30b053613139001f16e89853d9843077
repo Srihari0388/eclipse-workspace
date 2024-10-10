@@ -1,0 +1,22 @@
+import org.openqa.selenium.chrome.ChromeDriver;
+import java.util.concurrent.TimeUnit;
+
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane.MaximizeAction;
+
+import org.openqa.selenium.By;
+
+public class SelectDropDown {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "C:\\BrowserDrivers\\chromedriver.exe");
+		ChromeDriver driver = new ChromeDriver();
+		//driver.get("https://signon.service-now.com/");
+		driver.get("https://demowebshop.tricentis.com/register");
+		driver.findElement(By.id("gender-female")).click();//sendKeys("Srihari");
+		driver.findElement(By.name("FirstName")).sendKeys("Srihari");
+		driver.findElement(By.name("Email")).sendKeys("sriharibabuKolla01@gmail.com");
+		driver.findElement(By.name("LastName")).sendKeys("Kolla");
+		driver.findElement(By.name("Password")).sendKeys("123456");
+		driver.findElement(By.name("ConfirmPassword")).sendKeys("123456");
+	}
+}

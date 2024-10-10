@@ -1,0 +1,14 @@
+package Excercises;
+
+import java.util.Scanner;
+
+public class CurrentBill {
+
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		sc = next.int();
+		
+
+	}
+
+}

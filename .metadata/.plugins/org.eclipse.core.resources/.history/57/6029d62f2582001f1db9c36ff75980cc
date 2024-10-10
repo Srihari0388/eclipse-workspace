@@ -1,0 +1,14 @@
+
+public class Task002_1 {
+
+	public static void main(String[] args) {
+		int i,n,r;
+		n= 10;
+		for (i=1;i<=10;i++)
+		{
+		r=n*i;
+		System.out.println(n+"*"+i+"="+r);
+		}
+	}
+
+}

@@ -1,0 +1,24 @@
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane.MaximizeAction;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class JavaSeiniumDemo {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "C:\\BrowserDrivers\\chromedriver.exe");
+		ChromeDriver driver = new ChromeDriver();
+		driver.get("https://www.ebay.com/");
+		driver.findElement(By.xpath("//*[@id=\"gh-ug\"]/a")).click();
+		driver.findElement(By.id("userid")).sendKeys("sriharibabu.kolla@gmail.com");
+		driver.findElement(By.id("signin-continue-btn")).click();
+		//driver.findElement(By.ByXPath))
+		driver.findElement(By.xpath("//*[@id=\"gh-ug-flex\"]/a")).click();
+		driver.findElement(By.xpath("//*[@id=\"mainContent\"]/div[3]/div[2]/div[3]/div/div/div/label[1]")).click();
+		driver.findElement(By.id("firstname")).sendkeys("srihari");
+		driver.findElement(By.id("lastname")).sendkeys("kolla");
+		driver.findElement(By.id("userid")).sendKeys("sriharibabu.kolla@gmail.com");
+
+		}
+
+}

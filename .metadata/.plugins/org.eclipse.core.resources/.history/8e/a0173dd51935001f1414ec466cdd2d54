@@ -1,0 +1,25 @@
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane.MaximizeAction;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class JavaSeiniumDemo {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "C:\\BrowserDrivers\\chromedriver.exe");
+		ChromeDriver driver = new ChromeDriver();
+		driver.get("https://www.amazon.in/");
+		driver.findElement(By.xpath("//*[@id=\"nav-link-accountList\"]")).click();
+		driver.findElement(By.xpath("//*[@id=\"ap_email_login\"]")).sendKeys("sriharibabu.kolla@gmail.com");
+		driver.findElement(By.xpath("//*[@id=\"continue\"]/span/input")).click();
+		driver.findElement(By.xpath("//*[@id=\"ap_change_login_claim\"]")).click();
+		driver.findElement(By.xpath("//*[@id=\"ap_email_login\"]")).sendKeys();
+		driver.findElement(By.xpath("//*[@id=\"ap_email_login\"]")).sendKeys("9030245858");
+		
+		
+		
+		//driver.findElement(By.id("lastname")).sendKeys("kolla");
+
+		}
+
+}

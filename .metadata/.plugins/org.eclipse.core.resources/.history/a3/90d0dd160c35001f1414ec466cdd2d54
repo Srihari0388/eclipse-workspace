@@ -1,0 +1,18 @@
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane.MaximizeAction;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class JavaSeiniumDemo {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "C:\\BrowserDrivers\\chromedriver.exe");
+		ChromeDriver driver = new ChromeDriver();
+		driver.get("https://www.amazon.in/");
+		driver.findElement(By.xpath("//*[@id=\"nav-link-accountList\"]")).click();
+		
+		//driver.findElement(By.id("lastname")).sendKeys("kolla");
+
+		}
+
+}

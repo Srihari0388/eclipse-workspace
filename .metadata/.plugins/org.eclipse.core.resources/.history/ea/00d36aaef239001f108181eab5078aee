@@ -1,0 +1,44 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class WebDriverWait {
+    public static void main(String[] args) {
+        // Set up the WebDriver (e.g., ChromeDriver)
+        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+        WebDriver driver = new ChromeDriver();
+        
+        try {
+            // Open the desired web page
+            driver.get("https://example.com/login");
+
+            // Create an instance of WebDriverWait
+            WebDriverWait wait = new WebDriverWait(driver, 10);
+
+            // Wait until the username field is visible and enter a username
+            WebElement usernameField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("username")));
+            usernameField.sendKeys("your_username");
+
+            // Wait until the password field is visible and enter a password
+            WebElement passwordField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("password")));
+            passwordField.sendKeys("your_password");
+
+            // Wait until the login button is clickable and click it
+            WebElement loginButton = wait.until(ExpectedConditions.elementToBeClickable(By.id("loginButton")));
+            loginButton.click();
+
+            // Wait until the login process completes and the dashboard is visible
+            WebElement dashboard = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("dashboard")));
+            System.out.println("Login successful and dashboard is visible.");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            // Close the browser
+            driver.quit();
+        }
+    }
+}

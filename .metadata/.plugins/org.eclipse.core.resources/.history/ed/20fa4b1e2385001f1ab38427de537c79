@@ -1,0 +1,12 @@
+package Excercises;
+
+public class Challenge_1 {
+
+	public static void main(String[] args) {
+		int a = 0; int b = a; b = a++;
+		System.out.println("a value is :" +a);
+		System.out.println("b value is :" +b);
+		
+		}
+
+}
